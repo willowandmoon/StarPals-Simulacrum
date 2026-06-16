@@ -68,5 +68,9 @@ export async function GET(req: Request) {
     month: reportData.month,
     topProducts: reportData.items,
     emailError,
+    debug: {
+      NEXTAUTH_URL: process.env.NEXTAUTH_URL || null,
+      VERCEL_URL: process.env.VERCEL_URL || null,
+    }
   });
 }
