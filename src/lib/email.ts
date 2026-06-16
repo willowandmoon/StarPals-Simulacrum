@@ -127,6 +127,19 @@ export async function sendWelcomeEmail(name: string, email: string) {
   });
 }
 
+const PRODUCT_IMAGE_FALLBACKS: Record<string, string> = {
+  "Galaxy Buddy": "/characters/1.png",
+  "BluePaw": "/characters/2.png",
+  "Cream Puff": "/characters/3.png",
+  "Cloudberry": "/characters/4.png",
+  "Leo Hoodie": "/characters/5.png",
+  "SpaceKid": "/characters/6.png",
+  "Robiton Deluxe": "/characters/7.png",
+  "Heartsy Rock": "/characters/8.png",
+  "MysticKat Crystal": "/characters/9.png",
+  "TealBun Lucky": "/characters/10.png",
+};
+
 export async function sendSalesReport(salesData: {
   count: number;
   total: number;
@@ -138,8 +151,9 @@ export async function sendSalesReport(salesData: {
 
   const itemRows = sorted.map((item, i) => {
     const medal = i === 0 ? "1°" : i === 1 ? "2°" : i === 2 ? "3°" : `${i + 1}°`;
-    // La imagen se carga directamente desde la URL pública de producción
-    const imgSrc = getImgUrl(item.productImage || "/characters/1.png");
+    // Si la imagen está vacía (compras antiguas), buscamos el fallback según el nombre del producto
+    const fallbackImage = PRODUCT_IMAGE_FALLBACKS[item.productName] || "/characters/1.png";
+    const imgSrc = getImgUrl(item.productImage || fallbackImage);
     return `
     <tr style="background:${i % 2 === 0 ? "#ffffff" : "#f8f9ff"};">
       <td style="padding:12px 16px;border-bottom:1px solid #eef0f8;">
