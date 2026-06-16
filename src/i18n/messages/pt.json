@@ -1,0 +1,101 @@
+{
+  "nav": {
+    "home": "Início",
+    "favorites": "Favoritos",
+    "cart": "Carrinho",
+    "orders": "Meus pedidos",
+    "login": "Entrar",
+    "register": "Cadastrar",
+    "logout": "Sair",
+    "hello": "Olá, {name}"
+  },
+  "home": {
+    "title": "Colecione seus personagens favoritos",
+    "subtitle": "Descubra nossa coleção de figuras de edição limitada",
+    "inStock": "Em estoque",
+    "outOfStock": "Esgotado",
+    "saved": "Salvo",
+    "favorite": "Favorito",
+    "add": "Adicionar",
+    "inCart": "No carrinho ({qty})",
+    "noStock": "Sem estoque",
+    "addedToCart": "Adicionado ao carrinho!",
+    "nowHave": "Agora você tem {qty}",
+    "addError": "Erro ao adicionar",
+    "addFavorite": "Adicionar aos favoritos",
+    "removeFavorite": "Remover dos favoritos"
+  },
+  "product": {
+    "addToCart": "Adicionar ao carrinho",
+    "buyNow": "Comprar agora",
+    "loginRequired": "Entre para continuar",
+    "description": "Descrição",
+    "specs": "Especificações",
+    "stock": "Estoque disponível",
+    "category": "Categoria",
+    "back": "Voltar ao catálogo"
+  },
+  "stock": {
+    "dialogTitle": "Estoque insuficiente",
+    "dialogDesc": "Alguns produtos não têm estoque suficiente para o seu pedido:",
+    "available": "disponíveis",
+    "inCart": "no seu carrinho",
+    "buyAvailable": "Comprar o disponível",
+    "adjust": "Ajustar manualmente",
+    "noStockRemoved": "Produto removido (sem estoque)"
+  },
+  "cart": {
+    "title": "Meu Carrinho",
+    "empty": "Seu carrinho está vazio",
+    "total": "Total",
+    "checkout": "Finalizar compra",
+    "remove": "Remover",
+    "quantity": "Qtd",
+    "orderSuccess": "Pedido realizado com sucesso!",
+    "continueShopping": "Continuar comprando",
+    "product": "Produto",
+    "summary": "Resumo",
+    "orderHistory": "Ver histórico de pedidos",
+    "each": "un."
+  },
+  "favorites": {
+    "title": "Meus Favoritos",
+    "empty": "Você ainda não tem favoritos",
+    "browseCatalog": "Explorar catálogo"
+  },
+  "orders": {
+    "title": "Meus Pedidos",
+    "empty": "Você ainda não fez nenhum pedido",
+    "order": "Pedido",
+    "date": "Data",
+    "items": "Produtos",
+    "total": "Total",
+    "browseCatalog": "Ir ao catálogo",
+    "qty": "x"
+  },
+  "login": {
+    "title": "Olá de novo!",
+    "email": "E-mail",
+    "password": "Senha",
+    "submit": "Entrar",
+    "noAccount": "Não tem uma conta?",
+    "signUp": "Cadastre-se",
+    "error": "E-mail ou senha incorretos"
+  },
+  "register": {
+    "title": "Entre para o StarPals!",
+    "name": "Nome",
+    "email": "E-mail",
+    "password": "Senha",
+    "submit": "Criar conta",
+    "hasAccount": "Já tem uma conta?",
+    "signIn": "Entre",
+    "error": "Erro ao criar conta. Tente novamente.",
+    "emailExists": "Este e-mail já está cadastrado"
+  },
+  "common": {
+    "loading": "Carregando...",
+    "error": "Algo deu errado",
+    "retry": "Tentar novamente"
+  }
+}

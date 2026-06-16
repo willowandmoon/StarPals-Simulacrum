@@ -1,0 +1,101 @@
+{
+  "nav": {
+    "home": "Home",
+    "favorites": "Favorites",
+    "cart": "Cart",
+    "orders": "My orders",
+    "login": "Sign In",
+    "register": "Sign Up",
+    "logout": "Sign Out",
+    "hello": "Hi, {name}"
+  },
+  "home": {
+    "title": "Collect your favorite characters",
+    "subtitle": "Discover our limited edition figure collection",
+    "inStock": "In stock",
+    "outOfStock": "Out of stock",
+    "saved": "Saved",
+    "favorite": "Favorite",
+    "add": "Add",
+    "inCart": "In cart ({qty})",
+    "noStock": "No stock",
+    "addedToCart": "Added to cart!",
+    "nowHave": "You now have {qty}",
+    "addError": "Error adding item",
+    "addFavorite": "Add to favorites",
+    "removeFavorite": "Remove from favorites"
+  },
+  "product": {
+    "addToCart": "Add to cart",
+    "buyNow": "Buy now",
+    "loginRequired": "Sign in to continue",
+    "description": "Description",
+    "specs": "Specifications",
+    "stock": "Available stock",
+    "category": "Category",
+    "back": "Back to catalog"
+  },
+  "stock": {
+    "dialogTitle": "Insufficient stock",
+    "dialogDesc": "Some products don't have enough stock for your order:",
+    "available": "available",
+    "inCart": "in your cart",
+    "buyAvailable": "Buy available stock",
+    "adjust": "Adjust manually",
+    "noStockRemoved": "Product removed (out of stock)"
+  },
+  "cart": {
+    "title": "My Cart",
+    "empty": "Your cart is empty",
+    "total": "Total",
+    "checkout": "Checkout",
+    "remove": "Remove",
+    "quantity": "Qty",
+    "orderSuccess": "Order placed successfully!",
+    "continueShopping": "Continue shopping",
+    "product": "Product",
+    "summary": "Summary",
+    "orderHistory": "View order history",
+    "each": "each"
+  },
+  "favorites": {
+    "title": "My Favorites",
+    "empty": "You have no favorites yet",
+    "browseCatalog": "Browse catalog"
+  },
+  "orders": {
+    "title": "My Orders",
+    "empty": "You haven't placed any orders yet",
+    "order": "Order",
+    "date": "Date",
+    "items": "Items",
+    "total": "Total",
+    "browseCatalog": "Browse catalog",
+    "qty": "x"
+  },
+  "login": {
+    "title": "Hello again!",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Sign in",
+    "noAccount": "Don't have an account?",
+    "signUp": "Sign up",
+    "error": "Invalid email or password"
+  },
+  "register": {
+    "title": "Join StarPals!",
+    "name": "Name",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Create account",
+    "hasAccount": "Already have an account?",
+    "signIn": "Sign in",
+    "error": "Error creating account. Please try again.",
+    "emailExists": "This email is already registered"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "retry": "Try again"
+  }
+}
