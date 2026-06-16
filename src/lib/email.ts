@@ -13,21 +13,26 @@ const transporter = nodemailer.createTransport({
   tls: { rejectUnauthorized: false },
 });
 
-// Lee el PNG del filesystem y devuelve un data URI base64 (funciona en cualquier cliente de correo)
-function charDataUri(n: number): string {
-  try {
-    const filePath = path.join(process.cwd(), "public", "characters", `${n}.png`);
-    const data = fs.readFileSync(filePath);
-    return `data:image/png;base64,${data.toString("base64")}`;
-  } catch {
-    return "";
+// Genera la URL pública de la imagen usando el dominio de producción
+const getBaseUrl = () => {
+  if (process.env.NEXTAUTH_URL) {
+    return process.env.NEXTAUTH_URL;
   }
+  if (process.env.VERCEL_URL) {
+    return `https://${process.env.VERCEL_URL}`;
+  }
+  return "http://localhost:3000";
+};
+
+function getImgUrl(relPath: string): string {
+  const base = getBaseUrl();
+  const cleanPath = relPath.startsWith("/") ? relPath : `/${relPath}`;
+  return `${base}${cleanPath}`;
 }
 
-// Genera un bloque <img> embebido en base64
+// Genera un bloque <img> apuntando a la URL pública del personaje
 function charImg(n: number, size = 80): string {
-  const src = charDataUri(n);
-  if (!src) return "";
+  const src = getImgUrl(`/characters/${n}.png`);
   return `<img src="${src}" width="${size}" height="${size}"
     style="object-fit:contain;display:inline-block;vertical-align:middle;" alt="StarPal ${n}" />`;
 }
@@ -133,17 +138,8 @@ export async function sendSalesReport(salesData: {
 
   const itemRows = sorted.map((item, i) => {
     const medal = i === 0 ? "1°" : i === 1 ? "2°" : i === 2 ? "3°" : `${i + 1}°`;
-    // La imagen guardada puede ser "/characters/3.png" — leemos el archivo y lo embebemos en base64
-    const imgSrc = (() => {
-      const rel = item.productImage || "/characters/1.png";
-      try {
-        const filePath = path.join(process.cwd(), "public", rel.startsWith("/") ? rel.slice(1) : rel);
-        const data = fs.readFileSync(filePath);
-        return `data:image/png;base64,${data.toString("base64")}`;
-      } catch {
-        return charDataUri(1);
-      }
-    })();
+    // La imagen se carga directamente desde la URL pública de producción
+    const imgSrc = getImgUrl(item.productImage || "/characters/1.png");
     return `
     <tr style="background:${i % 2 === 0 ? "#ffffff" : "#f8f9ff"};">
       <td style="padding:12px 16px;border-bottom:1px solid #eef0f8;">
